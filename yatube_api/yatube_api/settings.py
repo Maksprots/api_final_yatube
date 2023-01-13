@@ -1,19 +1,14 @@
-from pathlib import Path
 import os
+from pathlib import Path
 
-# import dotenv
-# проверка на сервере ругается
-# а если обновить requirements
-# то возникает какой-то конфликт
-# с flake8 (трейсбек) так и не разобрался в чем дело)
-# dotenv.load_dotenv()
+import dotenv
+
+dotenv.load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-# SECRET_KEY = os.getenv('SECRET_KEY')
-SECRET_KEY = 'hhz7l-ltdismtf@bzyz+rple7*s*w$jak%whj@(@u0eok^f9k4'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = True
-
 
 ALLOWED_HOSTS = []
 
